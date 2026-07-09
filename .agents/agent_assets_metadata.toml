@@ -1,0 +1,32 @@
+uploads = []
+outputs = []
+
+[[generated]]
+id = "gtVY8c3eEeb2h2mY6q0hT"
+uri = "file://artifacts/dark-crib-digital/src/assets/hero.png"
+type = "image"
+title = "Cinematic condemned cinema neon green"
+
+[[generated]]
+id = "EygNf32MjLXLTMGmJTCOQ"
+uri = "file://artifacts/dark-crib-digital/src/assets/studio.png"
+type = "image"
+title = "Macabre dark web design studio"
+
+[[generated]]
+id = "U3ndYZxAXtdo1Z88xQ5za"
+uri = "file://artifacts/dark-crib-digital/src/assets/craft.png"
+type = "image"
+title = "Abstract dark art composition"
+
+[[generated]]
+id = "L7S84dmJFRvNdYaDS3qFD"
+uri = "file://artifacts/dark-crib-digital/src/assets/portfolio.png"
+type = "image"
+title = "Dark web design portfolio showcase"
+
+[[generated]]
+id = "aZrf1SCa6sRvmUQYCbpVp"
+uri = "file://artifacts/dark-crib-digital/src/assets/ritual.png"
+type = "image"
+title = "Dark ritual coding screen"

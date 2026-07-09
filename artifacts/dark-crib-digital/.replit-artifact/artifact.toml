@@ -1,0 +1,31 @@
+kind = "web"
+previewPath = "/"
+title = "Dark Crib Digital"
+version = "1.0.0"
+id = "artifacts/dark-crib-digital"
+router = "path"
+
+[[integratedSkills]]
+name = "react-vite"
+version = "1.0.0"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 23734
+
+[services.development]
+run = "pnpm --filter @workspace/dark-crib-digital run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/dark-crib-digital", "run", "build" ]
+publicDir = "artifacts/dark-crib-digital/dist/public"
+serve = "static"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "23734"
+BASE_PATH = "/"
