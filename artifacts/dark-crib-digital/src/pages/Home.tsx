@@ -334,10 +334,10 @@ export default function Home() {
 
               <ul className="space-y-4 font-mono text-sm text-foreground/80 mb-8 flex-grow">
                 {[
-                  'Single cinematic landing page',
-                  'Mobile responsive',
-                  'Contact or booking form',
-                  'Fast turnaround',
+                  'One professionally designed landing page',
+                  'Mobile-friendly design',
+                  'Contact button or enquiry form',
+                  'Delivered within 5 days',
                 ].map((f, i) => (
                   <li key={i} className="flex items-start gap-3">
                     <Check className="w-4 h-4 text-primary shrink-0 mt-0.5" />
@@ -366,11 +366,11 @@ export default function Home() {
 
               <ul className="space-y-4 font-mono text-sm text-foreground/80 mb-8 flex-grow">
                 {[
-                  '4–5 custom pages',
-                  'Home, About, Portfolio/Books',
-                  'Blog & Contact included',
-                  'Mobile responsive',
-                  'SEO foundations',
+                  'Up to five professionally designed pages',
+                  'Home, About, Gallery or Portfolio, Contact',
+                  'Mobile-friendly throughout',
+                  'Basic search engine setup',
+                  'Delivered within 10 days',
                 ].map((f, i) => (
                   <li key={i} className="flex items-start gap-3">
                     <Check className="w-4 h-4 text-primary shrink-0 mt-0.5" />
@@ -384,6 +384,15 @@ export default function Home() {
               </Button>
             </motion.div>
 
+          </div>
+
+          <div className="mt-12 max-w-3xl mx-auto text-center space-y-2">
+            <p className="font-mono text-xs text-muted-foreground uppercase tracking-widest">
+              Hosting and domain registration are separate costs. We'll happily help you set everything up.
+            </p>
+            <p className="font-mono text-xs text-muted-foreground uppercase tracking-widest">
+              No hidden fees. No ongoing contracts. Just straightforward websites for dark creatives.
+            </p>
           </div>
         </div>
       </section>
