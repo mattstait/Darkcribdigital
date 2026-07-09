@@ -230,8 +230,8 @@ export default function Home() {
             
             <div className="space-y-8 relative before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-transparent before:via-border before:to-transparent">
               {[
-                { step: "I", title: "The Seance", desc: "We sit in the dark and discuss your vision, your audience, and what makes your blood pump." },
-                { step: "II", title: "Incantation", desc: "Design mockups. Typography selection. We establish the mood and visual hierarchy." },
+                { step: "I", title: "The Seance", desc: "We sit in the dark and discuss your vision, your audience, and the story you want your website to tell." },
+                { step: "II", title: "Incantation", desc: "The ritual takes shape. Your ideas, artwork, and story are carefully assembled into a clear vision before we begin building." },
                 { step: "III", title: "Flesh & Bone", desc: "Development. We build the architecture, wire the interactions, and breathe life into the code." },
                 { step: "IV", title: "Resurrection", desc: "Launch. Your new digital presence is unleashed upon the mortal plane." }
               ].map((p, i) => (
