@@ -68,7 +68,7 @@ export default function Home() {
             animate={{ opacity: 1 }}
             transition={{ duration: 1, delay: 0.9 }}
           >
-            {["Horror authors", "Metal bands", "Creature artists", "Paranormal podcasts"].map((label, i) => (
+            {["Horror authors", "Local sole traders", "Musicians", "Illustrators"].map((label, i) => (
               <span key={i} className="flex items-center gap-3">
                 <span className="font-mono text-xs uppercase tracking-widest text-muted-foreground">{label}</span>
                 {i < 3 && <span className="text-primary/30 font-mono">·</span>}
