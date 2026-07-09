@@ -287,7 +287,7 @@ export default function Home() {
               {[
                 { icon: <PenTool />, title: "Horror Authors", desc: "Showcase your bibliography with terrifying elegance." },
                 { icon: <Gem />, title: "Local Sole Traders", desc: "Macabre jewellery, holistic wares, handmade oddities — a storefront as distinctive as your craft." },
-                { icon: <Music />, title: "Musicians", desc: "Tour dates, releases, and soundscapes in one atmospheric hub." },
+                { icon: <Music />, title: "Musicians", desc: "For the indie singer, songwriter, or guitar tutor — lessons, releases, and bookings in one atmospheric home." },
                 { icon: <Palette />, title: "Illustrators", desc: "Give your dark art a gallery worthy of its nightmares." }
               ].map((a, i) => (
                 <div key={i} className="flex gap-6 items-start group">
