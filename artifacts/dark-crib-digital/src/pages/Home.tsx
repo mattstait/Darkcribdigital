@@ -328,7 +328,7 @@ export default function Home() {
               transition={{ delay: 0 }}
             >
               <h3 className="text-2xl font-serif font-bold uppercase text-foreground mb-2">The Short Story</h3>
-              <p className="font-mono text-muted-foreground text-sm mb-6">One page. One chapter. Perfect for a book launch, actor's résumé, or portfolio link-in-bio.</p>
+              <p className="font-mono text-muted-foreground text-sm mb-6">A single-page website for authors, artists, musicians, and local businesses who want a professional online presence without the complexity.</p>
               <div className="text-4xl font-mono text-primary font-bold mb-1">$100</div>
               <div className="font-mono text-muted-foreground text-xs mb-8 uppercase tracking-widest">AUD</div>
 
@@ -360,7 +360,7 @@ export default function Home() {
               transition={{ delay: 0.15 }}
             >
               <h3 className="text-2xl font-serif font-bold uppercase text-foreground mb-2">The Anthology</h3>
-              <p className="font-mono text-muted-foreground text-sm mb-6">A full 4–5 page site: Home, About, Portfolio/Books, Blog, and Contact.</p>
+              <p className="font-mono text-muted-foreground text-sm mb-6">A complete multi-page website with room to tell your story, showcase your work, and help people get in touch.</p>
               <div className="text-4xl font-mono text-primary font-bold mb-1">$150</div>
               <div className="font-mono text-muted-foreground text-xs mb-8 uppercase tracking-widest">AUD</div>
 
