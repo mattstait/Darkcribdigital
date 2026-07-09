@@ -84,11 +84,11 @@ export default function Home() {
             transition={{ duration: 0.5, delay: 1.2 }}
             className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-2"
           >
-            <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 font-mono uppercase tracking-wider h-14 px-8 rounded-none border border-primary font-bold shadow-[0_0_20px_rgba(57,255,20,0.2)] hover:shadow-[0_0_30px_rgba(57,255,20,0.5)] transition-all duration-300" data-testid="button-hero-cta">
+            <Button size="lg" className="btn-flood font-mono uppercase tracking-wider h-14 px-8 rounded-none font-bold" data-testid="button-hero-cta">
               See Our Work
               <ArrowRight className="ml-2 w-5 h-5" />
             </Button>
-            <Button variant="outline" size="lg" className="border-border hover:bg-border/50 font-mono uppercase tracking-wider h-14 px-8 rounded-none bg-transparent" data-testid="button-hero-secondary">
+            <Button size="lg" className="btn-flood font-mono uppercase tracking-wider h-14 px-8 rounded-none" data-testid="button-hero-secondary">
               View Pricing
             </Button>
           </motion.div>
@@ -235,7 +235,7 @@ export default function Home() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
             >
-              <Button variant="outline" className="border-primary text-primary hover:bg-primary hover:text-black font-mono uppercase rounded-none rounded-tl-xl rounded-br-xl h-12 px-8" data-testid="button-view-all-work">
+              <Button className="btn-flood font-mono uppercase rounded-none h-12 px-8" data-testid="button-view-all-work">
                 View All Work
               </Button>
             </motion.div>
@@ -392,7 +392,7 @@ export default function Home() {
                 ))}
               </ul>
 
-              <Button variant="outline" className="w-full border-border font-mono uppercase rounded-none hover:bg-primary/10 hover:text-primary transition-colors" data-testid="button-pricing-tier-1">
+              <Button className="btn-flood w-full font-mono uppercase rounded-none" data-testid="button-pricing-tier-1">
                 Begin the Chapter
               </Button>
             </motion.div>
@@ -426,7 +426,7 @@ export default function Home() {
                 ))}
               </ul>
 
-              <Button className="w-full bg-primary text-primary-foreground hover:bg-primary/90 font-mono font-bold uppercase rounded-none shadow-[0_0_15px_rgba(57,255,20,0.2)]" data-testid="button-pricing-tier-2">
+              <Button className="btn-flood w-full font-mono font-bold uppercase rounded-none" data-testid="button-pricing-tier-2">
                 Open the Anthology
               </Button>
             </motion.div>
@@ -459,7 +459,7 @@ export default function Home() {
                 ))}
               </ul>
 
-              <Button variant="outline" className="w-full border-border font-mono uppercase rounded-none hover:bg-primary/10 hover:text-primary transition-colors" data-testid="button-pricing-tier-3">
+              <Button className="btn-flood w-full font-mono uppercase rounded-none" data-testid="button-pricing-tier-3">
                 Enter the Crypt
               </Button>
             </motion.div>
@@ -482,7 +482,7 @@ export default function Home() {
             <p className="font-mono text-xl text-muted-foreground mb-12 max-w-2xl mx-auto">
               Stop hiding your dark craft behind bright, generic websites. Let's build a digital sanctuary worthy of your nightmares.
             </p>
-            <Button size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90 font-mono uppercase tracking-wider h-16 px-12 text-lg rounded-none border border-accent shadow-[0_0_20px_rgba(138,3,3,0.3)] hover:shadow-[0_0_40px_rgba(138,3,3,0.6)] transition-all duration-300" data-testid="button-final-cta">
+            <Button size="lg" className="btn-flood font-mono uppercase tracking-wider h-16 px-12 text-lg rounded-none" data-testid="button-final-cta">
               Summon Us
             </Button>
           </motion.div>

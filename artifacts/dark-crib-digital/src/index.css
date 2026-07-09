@@ -185,3 +185,34 @@
     @apply font-serif tracking-tight;
   }
 }
+
+@layer components {
+  .btn-flood {
+    background: linear-gradient(to top, hsl(var(--primary)) 50%, #000000 50%) !important;
+    background-size: 100% 210% !important;
+    background-position: top !important;
+    border: 1.5px solid hsl(var(--primary)) !important;
+    color: hsl(var(--primary)) !important;
+    box-shadow:
+      0 2px 0 rgba(0, 0, 0, 0.9),
+      inset 0 1px 0 rgba(57, 255, 20, 0.07),
+      0 0 10px rgba(57, 255, 20, 0.07) !important;
+    transition:
+      background-position 0.7s cubic-bezier(0.4, 0, 0.15, 1),
+      color 0.45s ease,
+      box-shadow 0.4s ease !important;
+  }
+
+  .btn-flood:hover {
+    background-position: bottom !important;
+    color: #000000 !important;
+    box-shadow:
+      0 2px 0 rgba(0, 0, 0, 0.9),
+      0 0 22px rgba(57, 255, 20, 0.28) !important;
+  }
+
+  .btn-flood:active {
+    transform: translateY(1px);
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.9) !important;
+  }
+}
