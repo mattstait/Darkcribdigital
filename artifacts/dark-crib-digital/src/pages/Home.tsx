@@ -4,7 +4,6 @@ import { ChevronDown, Skull, Globe, Zap, ArrowRight, Music, PenTool, Radio, Chec
 import heroImg from "@/assets/hero.png";
 import studioImg from "@/assets/studio.png";
 import craftImg from "@/assets/craft.png";
-import portfolioImg from "@/assets/portfolio.png";
 import ritualImg from "@/assets/ritual.png";
 import { Button } from "@/components/ui/button";
 
@@ -22,7 +21,6 @@ export default function Home() {
         <div className="hidden md:flex items-center gap-8 font-mono text-sm">
           <a href="#about" className="hover:text-primary transition-colors uppercase">About</a>
           <a href="#services" className="hover:text-primary transition-colors uppercase">Our Craft</a>
-          <a href="#portfolio" className="hover:text-primary transition-colors uppercase">The Archives</a>
           <a href="#process" className="hover:text-primary transition-colors uppercase">The Ritual</a>
           <a href="#pricing" className="hover:text-primary transition-colors uppercase">Tribute</a>
         </div>
@@ -216,51 +214,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 4. Portfolio / Showcase */}
-      <section id="portfolio" className="py-32 px-6 relative z-20 bg-background overflow-hidden">
-        <div className="max-w-7xl mx-auto">
-          <div className="flex flex-col md:flex-row items-end justify-between mb-16 gap-8">
-            <motion.div
-              initial={{ opacity: 0, x: -30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-            >
-              <h2 className="text-4xl md:text-6xl font-serif font-bold uppercase mb-4">The Archives</h2>
-              <p className="font-mono text-muted-foreground max-w-xl">
-                A selection of digital manifestations we've brought into this world.
-              </p>
-            </motion.div>
-            <motion.div
-              initial={{ opacity: 0, x: 30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-            >
-              <Button className="btn-flood font-mono uppercase rounded-none h-12 px-8" data-testid="button-view-all-work">
-                View All Work
-              </Button>
-            </motion.div>
-          </div>
-
-          <motion.div 
-            className="relative w-full aspect-video border border-border bg-card/30 p-2"
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-          >
-            <img src={portfolioImg} alt="Portfolio Showcase" className="w-full h-full object-cover filter contrast-125 saturate-50 hover:saturate-100 hover:contrast-100 transition-all duration-700" />
-            <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-transparent to-transparent pointer-events-none" />
-            <div className="absolute bottom-8 left-8 right-8 flex justify-between items-end">
-              <div>
-                <h3 className="text-2xl md:text-4xl font-serif font-bold text-white uppercase drop-shadow-lg">Necromantic Arts</h3>
-                <p className="font-mono text-primary mt-2 uppercase tracking-widest text-sm drop-shadow-md">E-Commerce & Branding</p>
-              </div>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* 5. Process / The Ritual */}
+      {/* 4. Process / The Ritual */}
       <section id="process" className="py-32 px-6 bg-card relative z-20 border-y border-border/40">
         <div className="max-w-7xl mx-auto flex flex-col-reverse md:flex-row items-center gap-16">
           <motion.div 
