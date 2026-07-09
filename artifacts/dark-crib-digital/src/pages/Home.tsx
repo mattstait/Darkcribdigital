@@ -318,7 +318,7 @@ export default function Home() {
             <p className="font-mono text-muted-foreground">Professional craft. Transparent pricing. No blood oaths required.</p>
           </motion.div>
 
-          <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-8 max-w-3xl mx-auto">
             {/* Package 1 — The Short Story */}
             <motion.div
               className="border border-border bg-background p-8 flex flex-col hover:border-primary/50 transition-colors"
@@ -385,38 +385,6 @@ export default function Home() {
               </Button>
             </motion.div>
 
-            {/* Package 3 — The Crypt */}
-            <motion.div
-              className="border border-border bg-background p-8 flex flex-col hover:border-primary/50 transition-colors"
-              initial={{ opacity: 0, y: 40 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.3 }}
-            >
-              <h3 className="text-2xl font-serif font-bold uppercase text-foreground mb-2">The Crypt</h3>
-              <p className="font-mono text-muted-foreground text-sm mb-6">E-commerce ready. Built for artists selling prints, authors selling direct, or creators running memberships.</p>
-              <div className="text-4xl font-mono text-primary font-bold mb-1">$200</div>
-              <div className="font-mono text-muted-foreground text-xs mb-8 uppercase tracking-widest">AUD</div>
-
-              <ul className="space-y-4 font-mono text-sm text-foreground/80 mb-8 flex-grow">
-                {[
-                  'Everything in The Anthology',
-                  'E-commerce storefront',
-                  'Sell prints, books, or memberships',
-                  'Payment integration',
-                  'Product/catalogue pages',
-                ].map((f, i) => (
-                  <li key={i} className="flex items-start gap-3">
-                    <Check className="w-4 h-4 text-primary shrink-0 mt-0.5" />
-                    <span>{f}</span>
-                  </li>
-                ))}
-              </ul>
-
-              <Button className="btn-flood w-full font-mono uppercase rounded-none" data-testid="button-pricing-tier-3">
-                Enter the Crypt
-              </Button>
-            </motion.div>
           </div>
         </div>
       </section>
