@@ -5,6 +5,7 @@ import heroImg from "@/assets/hero.png";
 import studioImg from "@/assets/studio.png";
 import craftImg from "@/assets/craft.png";
 import ritualImg from "@/assets/ritual.png";
+import logoImg from "@/assets/logo.jpg";
 import { Button } from "@/components/ui/button";
 
 export default function Home() {
@@ -411,9 +412,7 @@ export default function Home() {
 
       {/* Footer */}
       <footer className="py-12 px-6 border-t border-border/20 bg-background text-center relative z-20">
-        <div className="font-serif text-2xl font-bold tracking-widest text-primary/50 uppercase mb-4">
-          Dark Crib Digital
-        </div>
+        <img src={logoImg} alt="Dark Crib Digital" className="w-24 h-24 object-contain mx-auto mb-4" />
         <p className="font-mono text-xs text-muted-foreground uppercase tracking-widest">
           &copy; {new Date().getFullYear()} Dark Crib Digital. Built in Hell.
         </p>
