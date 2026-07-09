@@ -82,12 +82,11 @@ export default function Home() {
             transition={{ duration: 0.5, delay: 1.2 }}
             className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-2"
           >
-            <Button size="lg" className="btn-flood font-mono uppercase tracking-wider h-14 px-8 rounded-none font-bold" data-testid="button-hero-cta">
-              See Our Work
-              <ArrowRight className="ml-2 w-5 h-5" />
-            </Button>
-            <Button size="lg" className="btn-flood font-mono uppercase tracking-wider h-14 px-8 rounded-none" data-testid="button-hero-secondary">
-              View Pricing
+            <Button asChild size="lg" className="btn-flood font-mono uppercase tracking-wider h-14 px-8 rounded-none font-bold" data-testid="button-hero-cta">
+              <a href="https://matthewtaitauthor.com/" target="_blank" rel="noopener noreferrer">
+                See Our Work
+                <ArrowRight className="ml-2 w-5 h-5" />
+              </a>
             </Button>
           </motion.div>
 
