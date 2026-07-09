@@ -20,7 +20,7 @@ export default function Home() {
           Dark Crib Digital
         </div>
         <div className="hidden md:flex items-center gap-8 font-mono text-sm">
-          <a href="#problem" className="hover:text-primary transition-colors uppercase">The Curse</a>
+          <a href="#about" className="hover:text-primary transition-colors uppercase">About</a>
           <a href="#services" className="hover:text-primary transition-colors uppercase">Our Craft</a>
           <a href="#portfolio" className="hover:text-primary transition-colors uppercase">The Archives</a>
           <a href="#process" className="hover:text-primary transition-colors uppercase">The Ritual</a>
@@ -29,85 +29,86 @@ export default function Home() {
       </nav>
 
       {/* 1. Hero Section */}
-      <section className="relative h-screen flex items-center justify-center pt-20 px-6">
+      <section className="relative h-screen flex items-center justify-center px-6">
         <div className="absolute inset-0 z-0">
           <motion.div style={{ y: y1 }} className="h-[120%] w-full">
-            <img 
-              src={heroImg} 
-              alt="Condemned Cinema" 
-              className="w-full h-full object-cover object-center opacity-40 mix-blend-luminosity filter grayscale contrast-125"
+            <img
+              src={heroImg}
+              alt="Condemned Cinema"
+              className="w-full h-full object-cover object-center opacity-25 filter grayscale contrast-125"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-background via-background/80 to-transparent mix-blend-multiply" />
-            <div className="absolute inset-0 bg-primary/10 mix-blend-overlay" />
+            <div className="absolute inset-0 bg-gradient-to-t from-background via-background/70 to-background/40" />
           </motion.div>
         </div>
-        
-        <div className="relative z-10 max-w-5xl mx-auto text-center">
+
+        <div className="relative z-10 max-w-4xl mx-auto text-center flex flex-col items-center gap-6">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, delay: 0.2 }}
+            transition={{ duration: 0.9, delay: 0.1 }}
           >
-            <h1 className="text-5xl md:text-7xl lg:text-9xl font-serif font-black leading-none mb-6 drop-shadow-2xl">
-              <span className="block text-primary mix-blend-screen filter drop-shadow-[0_0_15px_rgba(57,255,20,0.4)]">RESURRECT</span>
-              <span className="block text-foreground">YOUR DIGITAL PRESENCE</span>
+            <h1 className="text-6xl md:text-8xl lg:text-[10rem] font-serif font-black leading-none tracking-tight text-primary" style={{ textShadow: "0 0 40px rgba(57,255,20,0.3), 0 0 80px rgba(57,255,20,0.1)" }}>
+              DARK CRIB
+            </h1>
+            <h1 className="text-6xl md:text-8xl lg:text-[10rem] font-serif font-black leading-none tracking-tight text-foreground">
+              DIGITAL
             </h1>
           </motion.div>
-          
+
           <motion.p
-            className="text-xl md:text-3xl font-serif font-bold text-foreground/90 max-w-2xl mx-auto mb-4 leading-snug"
+            className="text-lg md:text-xl font-serif text-foreground/70 max-w-lg leading-relaxed"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ duration: 1, delay: 0.8 }}
+            transition={{ duration: 1, delay: 0.6 }}
           >
             Beautiful websites for horror creators.
           </motion.p>
 
           <motion.div
-            className="flex flex-wrap items-center justify-center gap-x-3 gap-y-1 mb-10"
+            className="flex flex-wrap items-center justify-center gap-x-3 gap-y-1"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ duration: 1, delay: 1.1 }}
+            transition={{ duration: 1, delay: 0.9 }}
           >
             {["Horror authors", "Metal bands", "Creature artists", "Paranormal podcasts"].map((label, i) => (
               <span key={i} className="flex items-center gap-3">
-                <span className="font-mono text-sm uppercase tracking-widest text-muted-foreground">{label}</span>
-                {i < 3 && <span className="text-primary/40 font-mono">·</span>}
+                <span className="font-mono text-xs uppercase tracking-widest text-muted-foreground">{label}</span>
+                {i < 3 && <span className="text-primary/30 font-mono">·</span>}
               </span>
             ))}
           </motion.div>
-          
+
           <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
+            initial={{ opacity: 0, y: 8 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 1.2 }}
-            className="flex flex-col sm:flex-row items-center justify-center gap-4"
+            className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-2"
           >
             <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 font-mono uppercase tracking-wider h-14 px-8 rounded-none border border-primary font-bold shadow-[0_0_20px_rgba(57,255,20,0.2)] hover:shadow-[0_0_30px_rgba(57,255,20,0.5)] transition-all duration-300" data-testid="button-hero-cta">
-              Enter the Void
+              See Our Work
               <ArrowRight className="ml-2 w-5 h-5" />
             </Button>
             <Button variant="outline" size="lg" className="border-border hover:bg-border/50 font-mono uppercase tracking-wider h-14 px-8 rounded-none bg-transparent" data-testid="button-hero-secondary">
-              View Our Craft
+              View Pricing
             </Button>
+          </motion.div>
+
+          <motion.div
+            className="flex items-center justify-center gap-6 pt-2"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1, delay: 1.5 }}
+          >
+            {["Affordable", "Fast", "Handmade in Australia"].map((v, i) => (
+              <span key={i} className="flex items-center gap-6">
+                <span className="font-mono text-xs uppercase tracking-[0.25em] text-primary/60">{v}</span>
+                {i < 2 && <span className="w-px h-3 bg-border inline-block" />}
+              </span>
+            ))}
           </motion.div>
         </div>
 
         <motion.div
-            className="flex items-center justify-center gap-6 mt-10"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 1, delay: 1.6 }}
-          >
-            {["Affordable", "Fast", "Handmade in Australia"].map((v, i) => (
-              <span key={i} className="flex items-center gap-6">
-                <span className="font-mono text-xs uppercase tracking-[0.25em] text-primary/70">{v}</span>
-                {i < 2 && <span className="w-px h-4 bg-border inline-block" />}
-              </span>
-            ))}
-          </motion.div>
-
-        <motion.div 
           className="absolute bottom-10 left-1/2 -translate-x-1/2 text-muted-foreground flex flex-col items-center gap-2"
           animate={{ y: [0, 10, 0] }}
           transition={{ repeat: Infinity, duration: 2, ease: "easeInOut" }}
@@ -117,8 +118,8 @@ export default function Home() {
         </motion.div>
       </section>
 
-      {/* 2. The Problem / Corporate Templates */}
-      <section id="problem" className="py-32 px-6 bg-background relative z-20 border-t border-border/30">
+      {/* 2. About */}
+      <section id="about" className="py-32 px-6 bg-background relative z-20 border-t border-border/30">
         <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-2 gap-16 items-center">
             <motion.div
@@ -127,15 +128,22 @@ export default function Home() {
               viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: 0.8 }}
             >
-              <h2 className="text-4xl md:text-6xl font-serif font-bold mb-6 leading-tight">
-                Corporate templates are a <span className="text-accent italic">death sentence.</span>
+              <p className="font-mono text-xs uppercase tracking-[0.3em] text-primary mb-6">About</p>
+              <h2 className="text-4xl md:text-5xl font-serif font-bold mb-8 leading-tight">
+                Built by a horror creator,<br />
+                <span className="text-primary">for horror creators.</span>
               </h2>
-              <p className="font-mono text-muted-foreground mb-6 leading-relaxed">
-                You spend months crafting nightmares, designing grotesque creatures, and writing stories that bleed. But your website looks like a dentist's office.
-              </p>
-              <p className="font-mono text-muted-foreground leading-relaxed">
-                Standard web agencies don't understand the dark arts. They sanitize your vision. We amplify the shadows.
-              </p>
+              <div className="space-y-5 font-mono text-muted-foreground leading-relaxed">
+                <p>
+                  I've been publishing horror fiction since 2011. I know what horror readers expect because I'm one of them.
+                </p>
+                <p>
+                  Dark Crib Digital exists because too many horror creators are forced to choose between generic website templates or agencies charging thousands of dollars.
+                </p>
+                <p className="text-foreground/80 font-serif text-lg italic">
+                  I believe great horror deserves a home on the web.
+                </p>
+              </div>
             </motion.div>
             <motion.div
               initial={{ opacity: 0, scale: 0.95 }}
@@ -146,8 +154,8 @@ export default function Home() {
             >
               <div className="absolute -top-4 -left-4 w-8 h-8 border-t-2 border-l-2 border-primary" />
               <div className="absolute -bottom-4 -right-4 w-8 h-8 border-b-2 border-r-2 border-primary" />
-              <img src={studioImg} alt="Dark Studio" className="w-full h-full object-cover filter grayscale contrast-150 mix-blend-lighten opacity-80" />
-              <div className="absolute inset-0 bg-primary/5 mix-blend-overlay" />
+              <img src={studioImg} alt="Dark Studio" className="w-full h-full object-cover filter grayscale contrast-150 opacity-80" />
+              <div className="absolute inset-0 bg-primary/5" />
             </motion.div>
           </div>
         </div>
