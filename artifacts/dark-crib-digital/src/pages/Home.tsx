@@ -323,56 +323,103 @@ export default function Home() {
             <p className="font-mono text-muted-foreground">Professional craft. Transparent pricing. No blood oaths required.</p>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            {/* Package 1 */}
-            <motion.div 
+          <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+            {/* Package 1 — The Short Story */}
+            <motion.div
               className="border border-border bg-background p-8 flex flex-col hover:border-primary/50 transition-colors"
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
+              transition={{ delay: 0 }}
             >
-              <h3 className="text-2xl font-serif font-bold uppercase text-foreground mb-2">The Apparition</h3>
-              <p className="font-mono text-muted-foreground text-sm mb-6">A focused, single-page presence to establish your domain.</p>
-              <div className="text-4xl font-mono text-primary font-bold mb-8">$1,500</div>
-              
+              <h3 className="text-2xl font-serif font-bold uppercase text-foreground mb-2">The Short Story</h3>
+              <p className="font-mono text-muted-foreground text-sm mb-6">One page. One chapter. Perfect for a book launch, actor's résumé, or portfolio link-in-bio.</p>
+              <div className="text-4xl font-mono text-primary font-bold mb-1">$100</div>
+              <div className="font-mono text-muted-foreground text-xs mb-8 uppercase tracking-widest">AUD</div>
+
               <ul className="space-y-4 font-mono text-sm text-foreground/80 mb-8 flex-grow">
-                {['Single cinematic landing page', 'Custom scroll animations', 'Basic contact form', 'Mobile responsive', '1 round of revisions'].map((f, i) => (
+                {[
+                  'Single cinematic landing page',
+                  'Mobile responsive',
+                  'Contact or booking form',
+                  'Fast turnaround',
+                ].map((f, i) => (
                   <li key={i} className="flex items-start gap-3">
                     <Check className="w-4 h-4 text-primary shrink-0 mt-0.5" />
                     <span>{f}</span>
                   </li>
                 ))}
               </ul>
-              
+
               <Button variant="outline" className="w-full border-border font-mono uppercase rounded-none hover:bg-primary/10 hover:text-primary transition-colors" data-testid="button-pricing-tier-1">
-                Select Tribute
+                Begin the Chapter
               </Button>
             </motion.div>
 
-            {/* Package 2 */}
-            <motion.div 
+            {/* Package 2 — The Anthology (featured) */}
+            <motion.div
               className="border border-primary bg-primary/5 p-8 flex flex-col relative overflow-hidden"
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: 0.2 }}
+              transition={{ delay: 0.15 }}
             >
-              <div className="absolute top-0 right-0 bg-primary text-black font-mono text-xs font-bold uppercase px-3 py-1">Recommended</div>
-              <h3 className="text-2xl font-serif font-bold uppercase text-primary mb-2">The Leviathan</h3>
-              <p className="font-mono text-muted-foreground text-sm mb-6">A full digital ecosystem with e-commerce capabilities.</p>
-              <div className="text-4xl font-mono text-primary font-bold mb-8">$4,500</div>
-              
+              <div className="absolute top-0 right-0 bg-primary text-black font-mono text-xs font-bold uppercase px-3 py-1">Most Popular</div>
+              <h3 className="text-2xl font-serif font-bold uppercase text-primary mb-2">The Anthology</h3>
+              <p className="font-mono text-muted-foreground text-sm mb-6">A full 4–5 page site: Home, About, Portfolio/Books, Blog, and Contact.</p>
+              <div className="text-4xl font-mono text-primary font-bold mb-1">$150</div>
+              <div className="font-mono text-muted-foreground text-xs mb-8 uppercase tracking-widest">AUD</div>
+
               <ul className="space-y-4 font-mono text-sm text-foreground/80 mb-8 flex-grow">
-                {['Up to 8 custom pages', 'E-commerce integration (Shopify/Stripe)', 'Advanced WebGL/Canvas effects', 'CMS for blog/news', 'Newsletter integration', '3 rounds of revisions'].map((f, i) => (
+                {[
+                  '4–5 custom pages',
+                  'Home, About, Portfolio/Books',
+                  'Blog & Contact included',
+                  'Mobile responsive',
+                  'SEO foundations',
+                ].map((f, i) => (
                   <li key={i} className="flex items-start gap-3">
                     <Check className="w-4 h-4 text-primary shrink-0 mt-0.5" />
                     <span>{f}</span>
                   </li>
                 ))}
               </ul>
-              
+
               <Button className="w-full bg-primary text-primary-foreground hover:bg-primary/90 font-mono font-bold uppercase rounded-none shadow-[0_0_15px_rgba(57,255,20,0.2)]" data-testid="button-pricing-tier-2">
-                Select Tribute
+                Open the Anthology
+              </Button>
+            </motion.div>
+
+            {/* Package 3 — The Crypt */}
+            <motion.div
+              className="border border-border bg-background p-8 flex flex-col hover:border-primary/50 transition-colors"
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.3 }}
+            >
+              <h3 className="text-2xl font-serif font-bold uppercase text-foreground mb-2">The Crypt</h3>
+              <p className="font-mono text-muted-foreground text-sm mb-6">E-commerce ready. Built for artists selling prints, authors selling direct, or creators running memberships.</p>
+              <div className="text-4xl font-mono text-primary font-bold mb-1">$200</div>
+              <div className="font-mono text-muted-foreground text-xs mb-8 uppercase tracking-widest">AUD</div>
+
+              <ul className="space-y-4 font-mono text-sm text-foreground/80 mb-8 flex-grow">
+                {[
+                  'Everything in The Anthology',
+                  'E-commerce storefront',
+                  'Sell prints, books, or memberships',
+                  'Payment integration',
+                  'Product/catalogue pages',
+                ].map((f, i) => (
+                  <li key={i} className="flex items-start gap-3">
+                    <Check className="w-4 h-4 text-primary shrink-0 mt-0.5" />
+                    <span>{f}</span>
+                  </li>
+                ))}
+              </ul>
+
+              <Button variant="outline" className="w-full border-border font-mono uppercase rounded-none hover:bg-primary/10 hover:text-primary transition-colors" data-testid="button-pricing-tier-3">
+                Enter the Crypt
               </Button>
             </motion.div>
           </div>
