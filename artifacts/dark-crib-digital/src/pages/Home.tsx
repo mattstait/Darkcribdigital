@@ -22,7 +22,7 @@ export default function Home() {
           <a href="#about" className="hover:text-primary transition-colors uppercase">About</a>
           <a href="#services" className="hover:text-primary transition-colors uppercase">Our Craft</a>
           <a href="#process" className="hover:text-primary transition-colors uppercase">The Ritual</a>
-          <a href="#pricing" className="hover:text-primary transition-colors uppercase">Tribute</a>
+          <a href="#pricing" className="hover:text-primary transition-colors uppercase">The Offerings</a>
         </div>
       </nav>
 
@@ -314,7 +314,7 @@ export default function Home() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-4xl md:text-6xl font-serif font-bold uppercase mb-4">Tribute</h2>
+            <h2 className="text-4xl md:text-6xl font-serif font-bold uppercase mb-4">The Offerings</h2>
             <p className="font-mono text-muted-foreground">Professional craft. Transparent pricing. No blood oaths required.</p>
           </motion.div>
 
