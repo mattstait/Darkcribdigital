@@ -54,14 +54,28 @@ export default function Home() {
             </h1>
           </motion.div>
           
-          <motion.p 
-            className="text-lg md:text-2xl font-mono text-muted-foreground max-w-2xl mx-auto mb-10 leading-relaxed uppercase tracking-wide"
+          <motion.p
+            className="text-xl md:text-3xl font-serif font-bold text-foreground/90 max-w-2xl mx-auto mb-4 leading-snug"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1, delay: 0.8 }}
           >
-            Web design for horror creatives, heavy metal bands, and dark illustrators who refuse to die in corporate templates.
+            Beautiful websites for horror creators.
           </motion.p>
+
+          <motion.div
+            className="flex flex-wrap items-center justify-center gap-x-3 gap-y-1 mb-10"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1, delay: 1.1 }}
+          >
+            {["Horror authors", "Metal bands", "Creature artists", "Paranormal podcasts"].map((label, i) => (
+              <span key={i} className="flex items-center gap-3">
+                <span className="font-mono text-sm uppercase tracking-widest text-muted-foreground">{label}</span>
+                {i < 3 && <span className="text-primary/40 font-mono">·</span>}
+              </span>
+            ))}
+          </motion.div>
           
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
@@ -78,6 +92,20 @@ export default function Home() {
             </Button>
           </motion.div>
         </div>
+
+        <motion.div
+            className="flex items-center justify-center gap-6 mt-10"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1, delay: 1.6 }}
+          >
+            {["Affordable", "Fast", "Handmade in Australia"].map((v, i) => (
+              <span key={i} className="flex items-center gap-6">
+                <span className="font-mono text-xs uppercase tracking-[0.25em] text-primary/70">{v}</span>
+                {i < 2 && <span className="w-px h-4 bg-border inline-block" />}
+              </span>
+            ))}
+          </motion.div>
 
         <motion.div 
           className="absolute bottom-10 left-1/2 -translate-x-1/2 text-muted-foreground flex flex-col items-center gap-2"
@@ -291,8 +319,8 @@ export default function Home() {
             <div className="space-y-8">
               {[
                 { icon: <PenTool />, title: "Horror Authors", desc: "Showcase your bibliography with terrifying elegance." },
-                { icon: <Zap />, title: "Creature Designers", desc: "Let your horrific creations take center stage." },
-                { icon: <Music />, title: "Heavy Metal Bands", desc: "Tour dates, merch, and soundscapes in one brutal hub." },
+                { icon: <Zap />, title: "Creature Artists", desc: "Let your horrific creations take center stage." },
+                { icon: <Music />, title: "Metal Bands", desc: "Tour dates, merch, and soundscapes in one brutal hub." },
                 { icon: <Radio />, title: "Paranormal Podcasters", desc: "Engage your listeners with a cinematic audio experience." }
               ].map((a, i) => (
                 <div key={i} className="flex gap-6 items-start group">
