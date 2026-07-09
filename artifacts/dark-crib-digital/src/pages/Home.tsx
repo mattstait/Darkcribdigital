@@ -59,7 +59,7 @@ export default function Home() {
             animate={{ opacity: 1 }}
             transition={{ duration: 1, delay: 0.6 }}
           >
-            Beautiful websites for horror creators.
+            Your nightmares deserve a better website.
           </motion.p>
 
           <motion.div
