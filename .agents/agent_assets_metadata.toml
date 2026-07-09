@@ -5,7 +5,7 @@ outputs = []
 id = "gtVY8c3eEeb2h2mY6q0hT"
 uri = "file://artifacts/dark-crib-digital/src/assets/hero.png"
 type = "image"
-title = "Cinematic condemned cinema neon green"
+title = "generated_image"
 
 [[generated]]
 id = "EygNf32MjLXLTMGmJTCOQ"

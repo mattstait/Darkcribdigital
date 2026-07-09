@@ -33,9 +33,9 @@ export default function Home() {
             <img
               src={heroImg}
               alt="Condemned Cinema"
-              className="w-full h-full object-cover object-center opacity-25 filter grayscale contrast-125"
+              className="w-full h-full object-cover object-center opacity-60 filter contrast-110"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-background via-background/70 to-background/40" />
+            <div className="absolute inset-0 bg-gradient-to-t from-background via-background/50 to-background/20" />
           </motion.div>
         </div>
 
