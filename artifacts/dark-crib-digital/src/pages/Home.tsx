@@ -1,6 +1,6 @@
 import React from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
-import { ChevronDown, Skull, Globe, Zap, ArrowRight, Music, PenTool, Palette, Check } from "lucide-react";
+import { ChevronDown, Skull, Globe, Gem, ArrowRight, Music, PenTool, Palette, Check } from "lucide-react";
 import heroImg from "@/assets/hero.png";
 import studioImg from "@/assets/studio.png";
 import craftImg from "@/assets/craft.png";
@@ -286,7 +286,7 @@ export default function Home() {
             <div className="space-y-8">
               {[
                 { icon: <PenTool />, title: "Horror Authors", desc: "Showcase your bibliography with terrifying elegance." },
-                { icon: <Zap />, title: "Creature Artists", desc: "Let your horrific creations take center stage." },
+                { icon: <Gem />, title: "Local Sole Traders", desc: "Macabre jewellery, holistic wares, handmade oddities — a storefront as distinctive as your craft." },
                 { icon: <Music />, title: "Musicians", desc: "Tour dates, releases, and soundscapes in one atmospheric hub." },
                 { icon: <Palette />, title: "Illustrators", desc: "Give your dark art a gallery worthy of its nightmares." }
               ].map((a, i) => (
