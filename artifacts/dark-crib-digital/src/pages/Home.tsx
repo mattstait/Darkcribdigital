@@ -351,16 +351,15 @@ export default function Home() {
               </Button>
             </motion.div>
 
-            {/* Package 2 — The Anthology (featured) */}
+            {/* Package 2 — The Anthology */}
             <motion.div
-              className="border border-primary bg-primary/5 p-8 flex flex-col relative overflow-hidden"
+              className="border border-border bg-background p-8 flex flex-col hover:border-primary/50 transition-colors"
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.15 }}
             >
-              <div className="absolute top-0 right-0 bg-primary text-black font-mono text-xs font-bold uppercase px-3 py-1">Most Popular</div>
-              <h3 className="text-2xl font-serif font-bold uppercase text-primary mb-2">The Anthology</h3>
+              <h3 className="text-2xl font-serif font-bold uppercase text-foreground mb-2">The Anthology</h3>
               <p className="font-mono text-muted-foreground text-sm mb-6">A full 4–5 page site: Home, About, Portfolio/Books, Blog, and Contact.</p>
               <div className="text-4xl font-mono text-primary font-bold mb-1">$150</div>
               <div className="font-mono text-muted-foreground text-xs mb-8 uppercase tracking-widest">AUD</div>
@@ -380,7 +379,7 @@ export default function Home() {
                 ))}
               </ul>
 
-              <Button className="btn-flood w-full font-mono font-bold uppercase rounded-none" data-testid="button-pricing-tier-2">
+              <Button className="btn-flood w-full font-mono uppercase rounded-none" data-testid="button-pricing-tier-2">
                 Open the Anthology
               </Button>
             </motion.div>
