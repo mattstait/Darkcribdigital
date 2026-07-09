@@ -1,6 +1,6 @@
 import React from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
-import { ChevronDown, Skull, Flame, Hexagon, Zap, ArrowRight, Music, PenTool, Radio, Check } from "lucide-react";
+import { ChevronDown, Skull, Globe, Zap, ArrowRight, Music, PenTool, Radio, Check } from "lucide-react";
 import heroImg from "@/assets/hero.png";
 import studioImg from "@/assets/studio.png";
 import craftImg from "@/assets/craft.png";
@@ -174,37 +174,42 @@ export default function Home() {
             <div className="w-24 h-1 bg-primary mx-auto" />
           </motion.div>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             {[
               {
                 icon: <Skull className="w-10 h-10 text-primary" />,
-                title: "Cinematic Web Design",
-                desc: "Custom-built, atmospheric experiences that grab your audience by the throat. No sterile layouts."
+                title: "Web Design",
+                desc: "Dark, atmospheric websites built to match your creative world — not a corporate template.",
+                items: ["Simple modern websites", "Author websites", "Book launch pages"],
               },
               {
-                icon: <Flame className="w-10 h-10 text-accent" />,
-                title: "E-Commerce from Hell",
-                desc: "Sell your merch, books, and art prints without sacrificing your aesthetic to boring cart templates."
+                icon: <Globe className="w-10 h-10 text-primary" />,
+                title: "Technical Setup",
+                desc: "Everything you need to go live and stay live — handled for you, no technical headaches.",
+                items: ["Domain setup", "GitHub hosting", "Cloudflare configuration"],
               },
-              {
-                icon: <Hexagon className="w-10 h-10 text-secondary" />,
-                title: "Atmospheric Branding",
-                desc: "Logos and visual identities forged in darkness. Professional, sharp, and unmistakably yours."
-              }
             ].map((s, i) => (
-              <motion.div 
+              <motion.div
                 key={i}
-                className="border border-border/50 p-8 hover:bg-background transition-colors duration-500 group relative overflow-hidden"
+                className="border border-border/50 p-10 hover:border-primary/40 transition-colors duration-500 group relative overflow-hidden bg-background/40"
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: i * 0.2 }}
+                transition={{ duration: 0.6, delay: i * 0.15 }}
                 data-testid={`card-service-${i}`}
               >
                 <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                 <div className="mb-6">{s.icon}</div>
-                <h3 className="text-2xl font-serif font-bold mb-4 uppercase">{s.title}</h3>
-                <p className="font-mono text-muted-foreground text-sm leading-relaxed">{s.desc}</p>
+                <h3 className="text-2xl font-serif font-bold mb-3 uppercase">{s.title}</h3>
+                <p className="font-mono text-muted-foreground text-sm leading-relaxed mb-6">{s.desc}</p>
+                <ul className="space-y-3">
+                  {s.items.map((item, j) => (
+                    <li key={j} className="flex items-center gap-3 font-mono text-sm text-foreground/70">
+                      <span className="w-1.5 h-1.5 bg-primary rounded-full shrink-0" />
+                      {item}
+                    </li>
+                  ))}
+                </ul>
               </motion.div>
             ))}
           </div>
