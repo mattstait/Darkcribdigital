@@ -345,10 +345,6 @@ export default function Home() {
                   </li>
                 ))}
               </ul>
-
-              <Button className="btn-flood w-full font-mono uppercase rounded-none" data-testid="button-pricing-tier-1">
-                Begin the Chapter
-              </Button>
             </motion.div>
 
             {/* Package 2 — The Anthology */}
@@ -378,10 +374,6 @@ export default function Home() {
                   </li>
                 ))}
               </ul>
-
-              <Button className="btn-flood w-full font-mono uppercase rounded-none" data-testid="button-pricing-tier-2">
-                Open the Anthology
-              </Button>
             </motion.div>
 
           </div>
@@ -408,9 +400,12 @@ export default function Home() {
             transition={{ duration: 0.8 }}
           >
             <Skull className="w-16 h-16 mx-auto text-primary mb-8 animate-pulse" />
-            <h2 className="text-5xl md:text-7xl font-serif font-black mb-6 uppercase">Ready to Bleed?</h2>
-            <p className="font-mono text-xl text-muted-foreground mb-12 max-w-2xl mx-auto">
-              Stop hiding your dark craft behind bright, generic websites. Let's build a digital sanctuary worthy of your nightmares.
+            <h2 className="text-5xl md:text-7xl font-serif font-black mb-6 uppercase">Begin the Ritual.</h2>
+            <p className="font-mono text-xl text-muted-foreground mb-4 max-w-2xl mx-auto">
+              Every great website begins with a conversation.
+            </p>
+            <p className="font-mono text-base text-muted-foreground mb-12 max-w-2xl mx-auto">
+              Tell me about your work, your audience, and the world you're creating. I'll reply personally and we'll decide together which Offering is the right fit.
             </p>
             <Button size="lg" className="btn-flood font-mono uppercase tracking-wider h-16 px-12 text-lg rounded-none" data-testid="button-final-cta">
               Summon Us
