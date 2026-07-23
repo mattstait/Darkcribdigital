@@ -21,6 +21,7 @@ export default function Home() {
         </div>
         <div className="hidden md:flex items-center gap-8 font-mono text-sm">
           <a href="#about" className="hover:text-primary transition-colors uppercase">About</a>
+          <a href="#portfolio" className="hover:text-primary transition-colors uppercase">Our Work</a>
           <a href="#services" className="hover:text-primary transition-colors uppercase">Our Craft</a>
           <a href="#process" className="hover:text-primary transition-colors uppercase">The Ritual</a>
           <a href="#pricing" className="hover:text-primary transition-colors uppercase">The Offerings</a>
@@ -84,7 +85,7 @@ export default function Home() {
             className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-2"
           >
             <Button asChild size="lg" className="btn-flood font-mono uppercase tracking-wider h-14 px-8 rounded-none font-bold" data-testid="button-hero-cta">
-              <a href="https://matthewtaitauthor.com/" target="_blank" rel="noopener noreferrer">
+              <a href="#portfolio">
                 See Our Work
                 <ArrowRight className="ml-2 w-5 h-5" />
               </a>
@@ -155,6 +156,59 @@ export default function Home() {
               <img src={studioImg} alt="Dark Studio" className="w-full h-full object-cover filter grayscale contrast-150 opacity-80" />
               <div className="absolute inset-0 bg-primary/5" />
             </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* 2b. Portfolio / Our Work */}
+      <section id="portfolio" className="py-32 px-6 bg-card relative z-20 border-t border-border/50">
+        <div className="max-w-5xl mx-auto">
+          <motion.div
+            className="text-center mb-16"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-4xl md:text-6xl font-serif font-bold uppercase mb-4">See Our Work</h2>
+            <p className="font-mono text-muted-foreground uppercase tracking-widest text-sm">A selection of sites built for dark creatives</p>
+          </motion.div>
+
+          <div className="grid md:grid-cols-2 gap-8">
+            {[
+              {
+                title: "Matthew Tait — Author",
+                url: "https://matthewtaitauthor.com/",
+                display: "matthewtaitauthor.com",
+                desc: "A literary home for horror fiction author Matthew Tait — bibliography, events, and the world behind the work.",
+              },
+              {
+                title: "Davey Ribbon",
+                url: "https://daveyribbon.com/",
+                display: "daveyribbon.com",
+                desc: "An atmospheric online presence for musician and artist Davey Ribbon.",
+              },
+            ].map((site, i) => (
+              <motion.a
+                key={i}
+                href={site.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group border border-border bg-background p-8 flex flex-col gap-4 hover:border-primary/50 transition-colors duration-300"
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.1 }}
+              >
+                <div className="flex items-start justify-between gap-4">
+                  <h3 className="text-xl font-serif font-bold uppercase group-hover:text-primary transition-colors">{site.title}</h3>
+                  <Globe className="w-5 h-5 text-muted-foreground group-hover:text-primary transition-colors flex-shrink-0 mt-1" />
+                </div>
+                <p className="font-mono text-sm text-muted-foreground leading-relaxed">{site.desc}</p>
+                <span className="font-mono text-xs text-primary/60 uppercase tracking-widest mt-auto group-hover:text-primary transition-colors">
+                  {site.display} ↗
+                </span>
+              </motion.a>
+            ))}
           </div>
         </div>
       </section>
