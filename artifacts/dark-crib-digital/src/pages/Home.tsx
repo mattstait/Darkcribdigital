@@ -185,7 +185,7 @@ export default function Home() {
                 title: "Davey Ribbon",
                 url: "https://daveyribbon.com/",
                 display: "daveyribbon.com",
-                desc: "An atmospheric online presence for musician and artist Davey Ribbon.",
+                desc: "Launch page for a forthcoming novel.",
               },
             ].map((site, i) => (
               <motion.a
