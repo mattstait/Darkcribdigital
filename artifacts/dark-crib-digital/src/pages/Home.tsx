@@ -187,6 +187,12 @@ export default function Home() {
                 display: "daveyribbon.com",
                 desc: "Launch page for a forthcoming novel.",
               },
+              {
+                title: "Deception Pass — Matthew Tait",
+                url: "https://deceptionpassbook.com/",
+                display: "deceptionpassbook.com",
+                desc: "Dedicated book site for Deception Pass, winner of the 2020 Australian Shadows Award for Best Novel.",
+              },
             ].map((site, i) => (
               <motion.a
                 key={i}
