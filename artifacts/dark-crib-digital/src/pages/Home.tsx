@@ -21,10 +21,10 @@ export default function Home() {
         </div>
         <div className="hidden md:flex items-center gap-8 font-mono text-sm">
           <a href="#about" className="hover:text-primary transition-colors uppercase">About</a>
-          <a href="#portfolio" className="hover:text-primary transition-colors uppercase">Our Work</a>
+          <a href="/work" className="hover:text-primary transition-colors uppercase">Our Work</a>
           <a href="#services" className="hover:text-primary transition-colors uppercase">Our Craft</a>
           <a href="#process" className="hover:text-primary transition-colors uppercase">The Ritual</a>
-          <a href="#pricing" className="hover:text-primary transition-colors uppercase">The Offerings</a>
+          <a href="#pricing" className="hover:text-primary transition-colors uppercase">The Offering</a>
         </div>
       </nav>
 
@@ -85,7 +85,7 @@ export default function Home() {
             className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-2"
           >
             <Button asChild size="lg" className="btn-flood font-mono uppercase tracking-wider h-14 px-8 rounded-none font-bold" data-testid="button-hero-cta">
-              <a href="#portfolio">
+              <a href="/work">
                 See Our Work
                 <ArrowRight className="ml-2 w-5 h-5" />
               </a>
@@ -156,65 +156,6 @@ export default function Home() {
               <img src={studioImg} alt="Dark Studio" className="w-full h-full object-cover filter grayscale contrast-150 opacity-80" />
               <div className="absolute inset-0 bg-primary/5" />
             </motion.div>
-          </div>
-        </div>
-      </section>
-
-      {/* 2b. Portfolio / Our Work */}
-      <section id="portfolio" className="py-32 px-6 bg-card relative z-20 border-t border-border/50">
-        <div className="max-w-5xl mx-auto">
-          <motion.div
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-4xl md:text-6xl font-serif font-bold uppercase mb-4">See Our Work</h2>
-            <p className="font-mono text-muted-foreground uppercase tracking-widest text-sm">A selection of sites built for dark creatives</p>
-          </motion.div>
-
-          <div className="grid md:grid-cols-2 gap-8">
-            {[
-              {
-                title: "Matthew Tait — Author",
-                url: "https://matthewtaitauthor.com/",
-                display: "matthewtaitauthor.com",
-                desc: "A literary home for horror fiction author Matthew Tait — bibliography, events, and the world behind the work.",
-              },
-              {
-                title: "Davey Ribbon",
-                url: "https://daveyribbon.com/",
-                display: "daveyribbon.com",
-                desc: "Launch page for a forthcoming novel.",
-              },
-              {
-                title: "Deception Pass — Matthew Tait",
-                url: "https://deceptionpassbook.com/",
-                display: "deceptionpassbook.com",
-                desc: "Dedicated book site for Deception Pass, winner of the 2020 Australian Shadows Award for Best Novel.",
-              },
-            ].map((site, i) => (
-              <motion.a
-                key={i}
-                href={site.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group border border-border bg-background p-8 flex flex-col gap-4 hover:border-primary/50 transition-colors duration-300"
-                initial={{ opacity: 0, y: 40 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.1 }}
-              >
-                <div className="flex items-start justify-between gap-4">
-                  <h3 className="text-xl font-serif font-bold uppercase group-hover:text-primary transition-colors">{site.title}</h3>
-                  <Globe className="w-5 h-5 text-muted-foreground group-hover:text-primary transition-colors flex-shrink-0 mt-1" />
-                </div>
-                <p className="font-mono text-sm text-muted-foreground leading-relaxed">{site.desc}</p>
-                <span className="font-mono text-xs text-primary/60 uppercase tracking-widest mt-auto group-hover:text-primary transition-colors">
-                  {site.display} ↗
-                </span>
-              </motion.a>
-            ))}
           </div>
         </div>
       </section>
@@ -374,76 +315,45 @@ export default function Home() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-4xl md:text-6xl font-serif font-bold uppercase mb-4">The Offerings</h2>
-            <p className="font-mono text-muted-foreground">Professional craft. Transparent pricing. No blood oaths required.</p>
+            <h2 className="text-4xl md:text-6xl font-serif font-bold uppercase mb-4">The Offering</h2>
+            <p className="font-mono text-muted-foreground">One website. Everything you need.</p>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 gap-8 max-w-3xl mx-auto">
-            {/* Package 1 — The Short Story */}
-            <motion.div
-              className="border border-border bg-background p-8 flex flex-col hover:border-primary/50 transition-colors"
-              initial={{ opacity: 0, y: 40 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0 }}
-            >
-              <h3 className="text-2xl font-serif font-bold uppercase text-foreground mb-2">The Short Story</h3>
-              <p className="font-mono text-muted-foreground text-sm mb-6">A single-page website for authors, artists, musicians, and local businesses who want a professional online presence without the complexity.</p>
-              <div className="text-4xl font-mono text-primary font-bold mb-1">$100</div>
-              <div className="font-mono text-muted-foreground text-xs mb-8 uppercase tracking-widest">AUD</div>
-
-              <ul className="space-y-4 font-mono text-sm text-foreground/80 mb-8 flex-grow">
-                {[
-                  'One professionally designed landing page',
-                  'Mobile-friendly design',
-                  'Contact button or enquiry form',
-                  'Delivered within 5 days',
-                ].map((f, i) => (
-                  <li key={i} className="flex items-start gap-3">
-                    <Check className="w-4 h-4 text-primary shrink-0 mt-0.5" />
-                    <span>{f}</span>
-                  </li>
-                ))}
-              </ul>
-            </motion.div>
-
-            {/* Package 2 — The Anthology */}
-            <motion.div
-              className="border border-border bg-background p-8 flex flex-col hover:border-primary/50 transition-colors"
-              initial={{ opacity: 0, y: 40 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.15 }}
-            >
-              <h3 className="text-2xl font-serif font-bold uppercase text-foreground mb-2">The Anthology</h3>
-              <p className="font-mono text-muted-foreground text-sm mb-6">A complete multi-page website with room to tell your story, showcase your work, and help people get in touch.</p>
-              <div className="text-4xl font-mono text-primary font-bold mb-1">$150</div>
-              <div className="font-mono text-muted-foreground text-xs mb-8 uppercase tracking-widest">AUD</div>
-
-              <ul className="space-y-4 font-mono text-sm text-foreground/80 mb-8 flex-grow">
-                {[
-                  'Up to five professionally designed pages',
-                  'Home, About, Gallery or Portfolio, Contact',
-                  'Mobile-friendly throughout',
-                  'Basic search engine setup',
-                  'Delivered within 10 days',
-                ].map((f, i) => (
-                  <li key={i} className="flex items-start gap-3">
-                    <Check className="w-4 h-4 text-primary shrink-0 mt-0.5" />
-                    <span>{f}</span>
-                  </li>
-                ))}
-              </ul>
-            </motion.div>
-
-          </div>
-
-          <div className="mt-12 max-w-3xl mx-auto text-center space-y-2">
-            <p className="font-mono text-xs text-muted-foreground uppercase tracking-widest">
-              Hosting and domain registration are separate costs. We'll happily help you set everything up.
+          <motion.div
+            className="border border-border bg-background p-8 md:p-12 max-w-3xl mx-auto flex flex-col hover:border-primary/50 transition-colors"
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+          >
+            <h3 className="text-3xl font-serif font-bold uppercase text-foreground mb-4">The Dark Crib</h3>
+            <p className="font-mono text-muted-foreground text-sm leading-relaxed mb-8">
+              A professionally designed, mobile-friendly website for authors, artists, musicians, and small businesses who want a distinctive online presence without the complexity or cost of a traditional web-design agency.
             </p>
+            <div className="text-4xl font-mono text-primary font-bold mb-1">$150</div>
+            <div className="font-mono text-muted-foreground text-xs mb-8 uppercase tracking-widest">AUD</div>
+
+            <ul className="space-y-4 font-mono text-sm text-foreground/80">
+              {[
+                'Up to five professionally designed pages',
+                'Home, About, Gallery / Portfolio, Contact and more',
+                'Mobile-friendly throughout',
+                'Contact button or enquiry form',
+                'Basic search engine setup',
+                'Customised to your work, branding and personality',
+                'Deployed to your own domain',
+                'Delivered within 10 days',
+              ].map((f, i) => (
+                <li key={i} className="flex items-start gap-3">
+                  <Check className="w-4 h-4 text-primary shrink-0 mt-0.5" />
+                  <span>{f}</span>
+                </li>
+              ))}
+            </ul>
+          </motion.div>
+
+          <div className="mt-12 max-w-3xl mx-auto text-center">
             <p className="font-mono text-xs text-muted-foreground uppercase tracking-widest">
-              No hidden fees. No ongoing contracts. Just straightforward websites for dark creatives.
+              One website. Everything you need. No complicated packages.
             </p>
           </div>
         </div>
@@ -465,10 +375,10 @@ export default function Home() {
               Every great website begins with a conversation.
             </p>
             <p className="font-mono text-base text-muted-foreground mb-12 max-w-2xl mx-auto">
-              Tell me about your work, your audience, and the world you're creating. I'll reply personally and we'll decide together which Offering is the right fit.
+              Tell me about your work, your audience, and the world you're creating. I'll reply personally and we'll decide together whether The Dark Crib is the right fit.
             </p>
-            <Button size="lg" className="btn-flood font-mono uppercase tracking-wider h-16 px-12 text-lg rounded-none" data-testid="button-final-cta">
-              Summon Us
+            <Button asChild size="lg" className="btn-flood font-mono uppercase tracking-wider h-16 px-12 text-lg rounded-none" data-testid="button-final-cta">
+              <a href="mailto:meridiantait@gmail.com">Summon Us</a>
             </Button>
           </motion.div>
         </div>
