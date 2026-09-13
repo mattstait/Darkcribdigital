@@ -330,7 +330,10 @@ export default function Home() {
               A professionally designed, mobile-friendly website for authors, artists, musicians, and small businesses who want a distinctive online presence without the complexity or cost of a traditional web-design agency.
             </p>
             <div className="text-4xl font-mono text-primary font-bold mb-1">$150</div>
-            <div className="font-mono text-muted-foreground text-xs mb-8 uppercase tracking-widest">AUD</div>
+            <div className="font-mono text-muted-foreground text-xs mb-5 uppercase tracking-widest">AUD</div>
+            <p className="font-mono text-xs text-primary mb-8 uppercase tracking-widest">
+              PayPal is our preferred payment method.
+            </p>
 
             <ul className="space-y-4 font-mono text-sm text-foreground/80">
               {[
@@ -341,7 +344,7 @@ export default function Home() {
                 'Basic search engine setup',
                 'Customised to your work, branding and personality',
                 'Deployed to your own domain',
-                'Delivered within 10 days',
+                'Delivered in 7 Days',
               ].map((f, i) => (
                 <li key={i} className="flex items-start gap-3">
                   <Check className="w-4 h-4 text-primary shrink-0 mt-0.5" />
